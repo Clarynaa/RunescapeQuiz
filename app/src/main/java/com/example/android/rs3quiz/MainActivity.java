@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
         if ((bandos.isChecked() && saradomin.isChecked() && zaros.isChecked() && mah.isChecked() && guthix.isChecked()) && !zilyana.isChecked() && !kree.isChecked() && !nex.isChecked()) {
             correctAnswers++;
             Log.v("MainActivity", "gods");
-        } else if (!mah.isChecked()) {
-            Toast.makeText(MainActivity.this, getString(R.string.mah), Toast.LENGTH_SHORT).show();
         }
         EditText godname = findViewById(R.id.godname);
         String godtext = godname.getText().toString();
@@ -55,7 +53,11 @@ public class MainActivity extends AppCompatActivity {
             correctAnswers++;
             Log.v("MainActivity", "Gs");
         }
-        Toast.makeText(MainActivity.this, getString(R.string.yourscore) + " " + correctAnswers + " out of " + totalQuestions, Toast.LENGTH_LONG).show();
+        if(correctAnswers > 0) {
+            Toast.makeText(MainActivity.this, getString(R.string.yourscore) + " " + correctAnswers + " out of " + totalQuestions, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(MainActivity.this, getString(R.string.zero), Toast.LENGTH_LONG).show();
+        }
         Button score = findViewById(R.id.score);
         score.setText("Resubmit Answers");
     }
