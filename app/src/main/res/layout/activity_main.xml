@@ -14,16 +14,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="cursive"
-            android:text="Runescape 3"
+            android:paddingRight="10dp"
+            android:text="@string/runescape3"
             android:textColor="@color/colorAccent"
-            android:textSize="50sp"
-            android:paddingRight="10dp"/>
+            android:textSize="50sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:fontFamily="cursive"
-            android:text="QUIZ"
+            android:text="@string/quiz"
+            android:textAllCaps="true"
             android:textColor="@color/colorAccent"
             android:textSize="50sp" />
     </LinearLayout>
@@ -102,7 +103,6 @@
                     android:text="Bandos" />
 
 
-
                 <CheckBox
                     android:id="@+id/Saradomin"
                     android:layout_width="wrap_content"
@@ -110,7 +110,6 @@
                     android:layout_below="@id/zilyana"
                     android:padding="8dp"
                     android:text="Saradomin" />
-
 
 
                 <CheckBox
@@ -175,9 +174,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:paddingBottom="20dp"
                 android:text="How many godswords are there?"
-                android:textColor="@android:color/black"
-                android:paddingBottom="20dp"/>
+                android:textColor="@android:color/black" />
 
             <RadioGroup
                 android:layout_width="match_parent"

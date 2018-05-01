@@ -14,7 +14,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     int totalQuestions = 4;
-    public String godsname = "guthix";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +40,13 @@ public class MainActivity extends AppCompatActivity {
         if ((bandos.isChecked() && saradomin.isChecked() && zaros.isChecked() && mah.isChecked() && guthix.isChecked()) && !zilyana.isChecked() && !kree.isChecked() && !nex.isChecked()) {
             correctAnswers++;
             Log.v("MainActivity", "gods");
-        }
-        else if (!mah.isChecked()){
+        } else if (!mah.isChecked()) {
             Toast.makeText(MainActivity.this, getString(R.string.mah), Toast.LENGTH_SHORT).show();
         }
         EditText godname = findViewById(R.id.godname);
-        String godtext = godname.getText().toString().toLowerCase();
+        String godtext = godname.getText().toString();
         Log.v("Main", "you typed: " + godtext.toLowerCase());
-        if (godtext.equals("guthix")) {
+        if (godtext.equalsIgnoreCase("guthix")) {
             correctAnswers++;
             Log.v("MainActivity", "Guthix");
         }
@@ -57,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
             correctAnswers++;
             Log.v("MainActivity", "Gs");
         }
-        Toast.makeText(MainActivity.this, getString(R.string.yourscore ) + " " + correctAnswers + " out of " + totalQuestions, Toast.LENGTH_LONG).show();
-
-        //String yourScore = "Your score is: " + correctAnswers + " out of " + totalQuestions;
+        Toast.makeText(MainActivity.this, getString(R.string.yourscore) + " " + correctAnswers + " out of " + totalQuestions, Toast.LENGTH_LONG).show();
         Button score = findViewById(R.id.score);
         score.setText("Resubmit Answers");
     }

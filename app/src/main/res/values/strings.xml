@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Rs3quiz</string>
+    <string name="app_name">Runescape 3 Quiz</string>
     <string name="mah">Mah may be an Elder God but she\'s still a god.</string>
     <string name="yourscore">Your score is: </string>
+    <string name="quiz">Quiz</string>
+    <string name="runescape3">Runescape 3</string>
 </resources>
